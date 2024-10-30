@@ -1,0 +1,44 @@
+@font-face {
+    font-family: RigelStar;
+    src: url(/src/font/Rigelstar.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../src/images/OIG1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.content-container{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.screen{
+    width: 65%;
+    height: 67%;
+    background-color: #212121dc;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content{
+    height: 200vh;
+}

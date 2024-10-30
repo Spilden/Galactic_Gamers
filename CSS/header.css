@@ -1,0 +1,18 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.header-title{
+    font-family: RigelStar;
+    font-size: 2rem;
+    color: black;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
