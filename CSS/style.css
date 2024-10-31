@@ -10,14 +10,24 @@
 }
 
 body {
-    background-image: url("../src/images/OIG1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    max-width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
     overflow: hidden;
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
 
 .content-container {
     width: 100vw;
@@ -31,7 +41,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 65%;
-    height: 67%;
+    height: 66%;
     background-color: #212121dc;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -40,11 +50,13 @@ body {
 }
 
 .page-title {
+    justify-self: center;
     font-family: RigelStar;
-    color: aliceblue;
+    color: black;
     font-size: 1.7rem;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 20px;
 }
 
 .page-list {
@@ -55,8 +67,9 @@ body {
     width: 100%;
 }
 
-.player-card {
+.player-card, .match-card {
     display: flex;
+    align-items: center;
     background-color: #2e2e2e;
     color: black;
     border-radius: 10px;
@@ -68,7 +81,7 @@ body {
         /* Glød 3 (kan være en annen farge) */
         0 0 25px rgba(0, 0, 255, 0.3);
     overflow: hidden;
-    margin: 20px;
+    margin: 10px 10px 40px 10px;
     text-align: center;
 }
 
@@ -91,6 +104,118 @@ body {
 
 .player-bio {
     font-size: 1rem;
-
     line-height: 1.4;
+}
+
+.match-card {
+    flex-direction: column;
+}
+
+.match-banner {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.match-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.team-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.result {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black
+}
+
+.content{
+    color: aliceblue;
+    padding: 13px;
+}
+
+.welcome-text,
+.mission-text,
+.join-text,
+.updates-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.mission-title,
+.offer-title,
+.join-title,
+.updates-title {
+    font-family: RigelStar;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.offer-list {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.final-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+    .screen {
+        display: flex;
+        width: 90%;
+        height: 85%;
+        padding: 5px;
+    }
+
+    .page-title {
+        font-size: 1.2rem;
+        padding-top: 0;
+    }
+
+    .screen{
+        height: 70%;
+    }
+
+    .match-card {
+        padding: 10px;
+    }
+
+    .team-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .game-name{
+        font-size: 1.4rem;
+    }
+
+    .result {
+        font-size: 2rem;
+    }
+
+    .profile-picture{
+        width: 120px;
+        height: 120px;
+    }
 }

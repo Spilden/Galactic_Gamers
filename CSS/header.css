@@ -44,3 +44,17 @@ header a:active{
     font-size: 1.1rem;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
+
+@media (max-width: 500px) {
+    .header-container{
+        padding: 10px 30px;
+    }
+
+    .header-title{
+        font-size: 1.3rem;
+    }
+
+    .nav-links a{
+        font-size: 0.85rem;
+    }
+}
