@@ -1,6 +1,8 @@
 header{
+    display: flex;
     margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.589);
+    justify-content: center;
 }
 
 header a{
@@ -21,8 +23,9 @@ header a:active{
 }
 
 .header-container{
+    max-width: 900px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px 90px;
 }
@@ -42,16 +45,18 @@ header a:active{
 .nav-links a{
     text-decoration: none;
     font-size: 1.1rem;
+    white-space: nowrap;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .header-container{
-        padding: 10px 30px;
+        padding: 10px 70px;
     }
 
     .header-title{
         font-size: 1.3rem;
+        word-spacing: 100vh;
     }
 
     .nav-links a{

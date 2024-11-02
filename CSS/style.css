@@ -23,8 +23,9 @@ main{
 
 .background-image {
     position: fixed;
-    top: 0;
+    bottom: 0;
     height: 100vh;
+    width: 100vw;
     z-index: -1;
 }
 
@@ -41,6 +42,7 @@ main{
     flex-direction: column;
     align-items: center;
     width: 65%;
+    max-width: 900px;
     height: 66%;
     background-color: #212121dc;
     overflow-y: scroll;
@@ -92,7 +94,9 @@ main{
 }
 
 .player-info {
-    padding: 15px;
+    height: 100%;
+    width: 100%;
+    padding-top: 5px;
 }
 
 .gamertag {
@@ -103,8 +107,12 @@ main{
 }
 
 .player-bio {
+    width: 100%;
+    height: 100%;
+    background-color: #3f3f3f;
     font-size: 1rem;
     line-height: 1.4;
+    overflow-wrap: anywhere;
 }
 
 .match-card {
@@ -113,15 +121,21 @@ main{
 
 .match-banner {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
     background-color: white;
     width: 100%;
     border-radius: 10px;
 }
 
-.game-name {
+.game-name, .match-date {
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.match-date{
+    
 }
 
 .match-info {
@@ -149,26 +163,21 @@ main{
     padding: 13px;
 }
 
-.welcome-text,
-.mission-text,
-.join-text,
-.updates-text {
-    font-size: 1rem;
+.text-style {
+    font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
-.mission-title,
-.offer-title,
-.join-title,
-.updates-title {
+.title-text-style, .final-text{
     font-family: RigelStar;
     font-size: 1.1rem;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
 .offer-list {
+    font-size: 1.1rem;
     list-style: disc;
     margin-left: 20px;
     margin-bottom: 15px;
@@ -176,11 +185,9 @@ main{
 
 .final-text {
     text-align: center;
-    font-size: 1.2rem;
-    margin-top: 30px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .screen {
         display: flex;
         width: 90%;
@@ -206,7 +213,7 @@ main{
         height: 50px;
     }
 
-    .game-name{
+    .game-name, .match-date{
         font-size: 1.4rem;
     }
 
@@ -215,7 +222,7 @@ main{
     }
 
     .profile-picture{
-        width: 120px;
-        height: 120px;
+        width: 160px;
+        height: 160px;
     }
 }
